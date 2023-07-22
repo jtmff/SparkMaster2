@@ -20,7 +20,7 @@ makeSyntheticDataGray.m - creates a set of images
 sparkLibrary.m - a set of representations of several real sparks found in our data.
 
 ## Compilation
-To compile SM2 into an executable file, we recommend using pyinstaller (after you install all the required libraries, the ones imported in main.py and SM2.py).
+If you want to compile the SM2 source codes into a runnable file, we recommend using pyinstaller (after you install all the required libraries: the ones imported in main.py and SM2.py).
 
 The command to use is:
 pyinstaller -F --hidden-import=imagesc --hidden-import=scikit-image --hidden-import=sklearn.utils._typedefs --hidden-import=sklearn.neighbors._partition_nodes --onefile --noconsole main.py
