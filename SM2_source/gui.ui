@@ -1,0 +1,1688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>965</width>
+    <height>652</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SparkMaster V2</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>931</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_basic_parameters">
+     <attribute name="title">
+      <string>Basic parameters</string>
+     </attribute>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pixel width (um)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Lines per second</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Spark detection threshold (0-1)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_basic_parameters_extracellular_space_threshold">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>221</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string comment="&quot;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This can be used to omit extracellular space from analysis. &quot; \                       &quot;This should be done (or you can remove the extracellular space as a pre-processing step yourself) or the analysis may be unreliable in the extracellular region. &quot; \                       &quot;Pixels with intensity below this threshold are omitted from the analysis. &quot; \                       &quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&quot;" extracomment="&quot;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This can be used to omit extracellular space from analysis. &quot; \                       &quot;This should be done (or you can remove the extracellular space as a pre-processing step yourself) or the analysis may be unreliable in the extracellular region. &quot; \                       &quot;Pixels with intensity below this threshold are omitted from the analysis. &quot; \                       &quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&quot;"/>
+      </property>
+      <property name="whatsThis">
+       <string comment="&quot;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This can be used to omit extracellular space from analysis. &quot; \                       &quot;This should be done (or you can remove the extracellular space as a pre-processing step yourself) or the analysis may be unreliable in the extracellular region. &quot; \                       &quot;Pixels with intensity below this threshold are omitted from the analysis. &quot; \                       &quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&quot;" extracomment="&quot;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This can be used to omit extracellular space from analysis. &quot; \                       &quot;This should be done (or you can remove the extracellular space as a pre-processing step yourself) or the analysis may be unreliable in the extracellular region. &quot; \                       &quot;Pixels with intensity below this threshold are omitted from the analysis. &quot; \                       &quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&quot;"/>
+      </property>
+      <property name="text">
+       <string>Extracellular space threshold (fl. units)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_parameters_basic_pixel_width">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_parameters_basic_fps">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>80</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_parameters_spark_detection_threshold">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>130</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_parameters_extracellular_space_threshold">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>180</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_advanced_parameters">
+     <attribute name="title">
+      <string>Advanced parameters</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>911</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="ap_image_preprocessing">
+       <attribute name="title">
+        <string>Image preprocessing</string>
+       </attribute>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>171</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>1D Gauss filter width (um)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_image_preprocessing_lineEdit_1dGaussFilter">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>60</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ap_image_preprocessing_label_1dGaussFilter_pixels">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>60</y>
+          <width>91</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>(= X pixels)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>201</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>2D median filtering width (um)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_image_preprocessing_lineEdit_median_width">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>20</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ap_image_preprocessing_label_median_filtering_pixels">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>20</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>(= X pixels)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>171</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Temporal filter duration (ms)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_image_preprocessing_lineEdit_temporal_filter_duration">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>100</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ap_image_preprocessing_label_temporal_filtering_pixels">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>100</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>(= X pixels)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>20</y>
+          <width>201</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>2D median filtering duration (ms)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_image_preprocessing_lineEdit_median_duration">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>20</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ap_image_preprocessing_label_median_duration_pixels">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>20</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>(= X pixels)</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="ap_image_preprocessing_tickboxSpaceSubtraction">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>170</y>
+          <width>231</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Spatial background subtraction</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="ap_image_preprocessing_tickboxTimeSubtraction">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>231</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Temporal background subtraction</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ap_spark_detection">
+       <attribute name="title">
+        <string>Spark detection</string>
+       </attribute>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>211</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Object detection threshold (SDs)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_spark_detection_lineEdit_object_threshold">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>20</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>211</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Morphological opening radius (um)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_spark_detection_lineEdit_morphological_radius">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>60</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ap_spark_detection_label_morphological_radius_pixels">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>60</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>(= X pixels)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>211</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Brightness scoring quantile (0-1)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_spark_detection_lineEdit_brightness_quantile">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>100</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ap_spark_splitting">
+       <attribute name="title">
+        <string>Spark splitting</string>
+       </attribute>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>181</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Threshold step (SDs)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_17">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>181</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Minimum splitting depth</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>181</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Maximum threshold (SDs)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_spark_splitting_lineEdit_threshold_step">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>20</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_spark_splitting_lineEdit_minimum_depth">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>60</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_spark_splitting_lineEdit_maximum_threshold">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>100</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ap_long_spark">
+       <attribute name="title">
+        <string>Long sparks</string>
+       </attribute>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>211</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Long spark core diameter (um)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>211</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Minimum long spark duration (ms)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>140</y>
+          <width>211</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Maximum long spark width (um)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>180</y>
+          <width>211</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Minimum &quot;long sparkiness&quot; (0-1)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_long_sparks_lineEdit_long_spark_core_diameter">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>100</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_long_sparks_lineEdit_minimum_duration">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>60</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_long_sparks_lineEdit_long_spark_width">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>140</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_long_sparks_lineEdit_minimum_sparkiness">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>180</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ap_long_sparks_label_core_diameter_pixels">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>100</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>(= X pixels)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ap_long_sparks_minimum_duration_pixels">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>60</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>(= X pixels)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ap_long_sparks_label_maximum_width_pixels">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>140</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>(= X pixels)</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="ap_long_spark_checkbox_search">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>181</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Search for long sparks?</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ap_wave_classification">
+       <attribute name="title">
+        <string>Wave classification</string>
+       </attribute>
+       <widget class="QCheckBox" name="ap_wave_classification_checkbox_search">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>231</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Search for waves/miniwaves</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_19">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>191</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Wave sub-core threshold (SDs)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>191</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Miniwave score threshold (0-1)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_21">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>140</y>
+          <width>201</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Wave score threshold (0-1)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_wave_classification_lineEdit_wave_subcore_threshold">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>60</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_wave_classification_lineEdit_miniwave_score_threshold">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>100</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_wave_classification_lineEdit_wave_score_threshold">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>140</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_scoring">
+       <attribute name="title">
+        <string>Scoring functions</string>
+       </attribute>
+       <widget class="QLabel" name="label_22">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Spark size midpoint (um*ms)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_scoring_lineEdit_spark_size_midpoint">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>20</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_23">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>20</y>
+          <width>151</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Spark size slope</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_scoring_lineEdit_spark_size_slope">
+        <property name="geometry">
+         <rect>
+          <x>720</x>
+          <y>20</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_26">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Subspark size midpoint (um*ms)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_scoring_lineEdit_subspark_size_midpoint">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>130</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ap_scoring_label_spark_size_midpoint_pixels">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>20</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>(= X pixels)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_28">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>130</y>
+          <width>151</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Subspark size slope</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_scoring_lineEdit_subspark_size_slope">
+        <property name="geometry">
+         <rect>
+          <x>720</x>
+          <y>130</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_scoring_lineEdit_spark_brightness_midpoint">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>60</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_29">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>60</y>
+          <width>151</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Spark brightness slope</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_scoring_lineEdit_spark_brightness_slope">
+        <property name="geometry">
+         <rect>
+          <x>720</x>
+          <y>60</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_30">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Spark brightness midpoint (SDs over thresh.)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ap_scoring_label_subspark_size_midpoint_pixels">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>130</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>(= X pixels)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_scoring_lineEdit_wave_brightness_midpoint">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>240</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_32">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>240</y>
+          <width>151</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Wave brightness slope</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_33">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>200</y>
+          <width>151</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Wave size slope</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_34">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Wave size midpoint (um*ms)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_scoring_lineEdit_wave_size_slope">
+        <property name="geometry">
+         <rect>
+          <x>720</x>
+          <y>200</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_scoring_lineEdit_wave_brightness_slope">
+        <property name="geometry">
+         <rect>
+          <x>720</x>
+          <y>240</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_35">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>240</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Wave brightness midpoint (SDs over thresh.)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ap_scoring_label_wave_size_midpoint_pixels">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>200</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>(= X pixels)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_scoring_lineEdit_wave_size_midpoint">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>200</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ap_scoring_functions_buttonPlot1">
+        <property name="geometry">
+         <rect>
+          <x>860</x>
+          <y>20</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Plot</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ap_scoring_functions_buttonPlot2">
+        <property name="geometry">
+         <rect>
+          <x>860</x>
+          <y>60</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Plot</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ap_scoring_functions_buttonPlot3">
+        <property name="geometry">
+         <rect>
+          <x>860</x>
+          <y>130</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Plot</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ap_scoring_functions_buttonPlot4">
+        <property name="geometry">
+         <rect>
+          <x>860</x>
+          <y>200</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Plot</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ap_scoring_functions_buttonPlot5">
+        <property name="geometry">
+         <rect>
+          <x>860</x>
+          <y>240</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Plot</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ap_plotting">
+       <attribute name="title">
+        <string>Plotting</string>
+       </attribute>
+       <widget class="QPushButton" name="ap_plotting_button_browse">
+        <property name="geometry">
+         <rect>
+          <x>690</x>
+          <y>280</y>
+          <width>71</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Browse</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>280</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Output folder for saving</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_plotting_lineEdit_folder_save">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>280</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ap_plotting_lineEdit_DPI">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>310</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_image_resolution_dpi">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>310</y>
+          <width>141</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Image resolution (DPI)</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>331</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Image pre-processing</string>
+        </property>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_rawImg">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>141</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Raw image</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgSDtransform">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>100</y>
+           <width>201</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>SD-transformed image</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgNormalizedAndSmoothed">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>271</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Normalized and smoothed image</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgNormalized">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>241</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Row-and-column-normalized image</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgColNormalized">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>191</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Column-normalized image</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>180</y>
+          <width>331</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Object scoring</string>
+        </property>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgCandidateObjects">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>201</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Candidate spark objects</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgSizeRawMap">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>241</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Map of object sizes (pixels)</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgBrightnessScoreMap">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>100</y>
+           <width>261</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Map of object x-quantile brightness score</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgSizeScoreMap">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>201</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Map of object size scores</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgBrightnessQuantileMap">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>341</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Map of object x-quantile brightness (SDs)</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgObjectScoreBeforeSplitting">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>120</y>
+           <width>321</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Object compound score before splitting</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>20</y>
+          <width>331</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Release event splitting</string>
+        </property>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgObjectColoringBeforeSplitting">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>391</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Spark segmentation visualization before splitting</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgObjectColoringAfterSplitting">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>351</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Spark segmentation visualization after splitting</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgObjectsHighThresholdWaveSplitting">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>351</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>High-threshold image for wave splitting</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_7">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>140</y>
+          <width>331</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Other visualizations</string>
+        </property>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgDensityPlotPreceding">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>211</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Density plot (to preceding sparks)</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgDensityPlotGeneral">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>211</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Density plot (general)</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="ap_plotting_checkbox_imgBoundingBoxes">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>211</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Spark bounding boxes</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>221</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Main analysis</string>
+    </property>
+    <widget class="QPushButton" name="button_save_outputs">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>130</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Save outputs</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_analyze_data">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>80</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Analyze</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_load_image">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>32</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Load image</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>430</y>
+      <width>561</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Other functionality</string>
+    </property>
+    <widget class="QPushButton" name="button_save_parameters">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>30</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Save parameters</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_load_parameters">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>70</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Load parameters</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_autofit">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>30</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Autofit parameters</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_batch_analysis">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Batch analysis</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>60</y>
+       <width>151</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Simple</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>131</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Advanced</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton_close_all_figures">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>140</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Close all figures</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>965</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
