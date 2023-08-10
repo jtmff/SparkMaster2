@@ -3,7 +3,7 @@ SparkMaster 2 (SM2) software for the analysis of Ca sparks.
 This software is licensed under the GNU GPL v3. If you have any questions (scientific, as well as on licensing) please get in touch with us at jakub.tomek.mff@gmail.com
 
 ## Runnable application download
-The runnable version of SM2 for Windows, macOS, and Linux is available at [Google Drive](https://drive.google.com/drive/folders/1Gs_f9ilt5Orq9AeqWzHas44Pz8-UKZaV?usp=sharing), including sample data and a user guide. Please see the **README** file there if you encounter any issues downloading/running SM2. In particular, if you want to use the Mac version, it will point you to an explanation of how to make the application bypass the overzealous macOS security (it is simple do not worry).
+The runnable version of SM2 for Windows, macOS, and Linux is available at the [UC Davis site](https://somapp.ucdmc.ucdavis.edu/Pharmacology/bers/) or alternatively [Google Drive](https://drive.google.com/drive/folders/1Gs_f9ilt5Orq9AeqWzHas44Pz8-UKZaV?usp=sharing), including sample data and a user guide. Please see the **README** file there if you encounter any issues downloading/running SM2. In particular, if you want to use the Mac version, it will point you to an explanation of how to make the application bypass the overzealous macOS security (it is simple do not worry).
 
 ## Files
 /SM2_source contains the source codes for SM2
