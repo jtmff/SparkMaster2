@@ -1,0 +1,10 @@
+﻿SPEC_min_dice,SPEC_penalty_fp,SPEC_penalty_fn,preprocessing_1dGaussFilter_um,preprocessing_medfilt_width_um,preprocessing_medfilt_duration_ms,preprocessing_temporal_filter_duration,spark_detection_morpho_radius_um,spark_detection_lower_threshold,spark_detection_compound_threshold,spark_detection_quantile_level,long_sparks_search_for_long_sparks,long_sparks_core_diameter_um,long_sparks_min_long_spark_duration_ms,long_sparks_max_long_spark_width_um,long_sparks_threshold_long_sparkiness,splitting_sparks_splitting_threshold_step,splitting_sparks_splitting_min_split_depth,splitting_sparks_splitting_max_threshold,wave_classification_search_for_waves,wave_classification_wave_subcore_detection_threshold,wave_classification_miniwave_threshold,wave_classification_wave_threshold,scoring_spark_scoring_size_midpoint_umms,SPEC_spark_size_slope,scoring_subspark_scoring_size_midpoint_umms,SPEC_subspark_size_slope,SPEC_spark_brightness_midpoint,SPEC_spark_brightness_slope,scoring_wave_scoring_size_midpoint_umms,SPEC_wave_scoring_size_slope,SPEC_wave_brightness_midpoint,SPEC_wave_brightness_slope
+0.1,1,1,,,,,,,0.1,,,,,,,,,,,,,,,,10,,,,,,,
+0.1,1,1,,,,,,,0.2,,,,,,,,,,,,,,,,90,,,,,,,
+0.1,1,1,,,,,,,0.3,,,,,,,,,,,,,,,,,,,,,,,
+0.1,1,1,,,,,,,0.4,,,,,,,,,,,,,,,,,,,,,,,
+0.1,1,1,,,,,,,0.5,,,,,,,,,,,,,,,,,,,,,,,
+0.1,1,1,,,,,,,0.6,,,,,,,,,,,,,,,,,,,,,,,
+0.1,1,1,,,,,,,0.7,,,,,,,,,,,,,,,,,,,,,,,
+0.1,1,1,,,,,,,0.8,,,,,,,,,,,,,,,,,,,,,,,
+0.1,1,1,,,,,,,0.9,,,,,,,,,,,,,,,,,,,,,,,
